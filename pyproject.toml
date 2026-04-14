@@ -3,7 +3,7 @@ requires = ["setuptools>=64"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "claude-sdk"
+name = "claude-subprocess-sdk"
 version = "0.1.0"
 description = "Python wrapper around the Claude CLI — call Claude from code using your existing subscription, no API key needed."
 readme = "README.md"

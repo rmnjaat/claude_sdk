@@ -1,10 +1,16 @@
-# Claude SDK (Python)
+# Claude Subprocess SDK
 
 A Python wrapper around the `claude` CLI that lets you call Claude from your code using your existing Claude subscription — no API key needed.
 
 It works by spawning `claude -p <prompt> --output-format json` as a subprocess and parsing the response.
 
 ## Installation
+
+```bash
+pip install claude-subprocess-sdk
+```
+
+Or install from GitHub:
 
 ```bash
 pip install git+https://github.com/rmnjaat/claude_sdk.git
