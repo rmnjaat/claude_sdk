@@ -9,6 +9,8 @@ Usage::
     print(response.result)
 """
 
+__version__ = "0.1.0"
+
 from .client import Claude
 from .conversation import Conversation
 from .exceptions import (

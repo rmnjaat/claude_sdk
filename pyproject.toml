@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claude-sdk"
+version = "0.1.0"
+description = "Python wrapper around the Claude CLI — call Claude from code using your existing subscription, no API key needed."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "rmnjaat", email = "ramanjangu@gmail.com" },
+]
+keywords = ["claude", "anthropic", "cli", "sdk", "ai", "llm"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://github.com/rmnjaat/claude_sdk"
+Repository = "https://github.com/rmnjaat/claude_sdk"
+Issues = "https://github.com/rmnjaat/claude_sdk/issues"
+
+[tool.setuptools.packages.find]
+include = ["claude_sdk*"]

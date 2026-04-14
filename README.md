@@ -7,8 +7,21 @@ It works by spawning `claude -p <prompt> --output-format json` as a subprocess a
 ## Installation
 
 ```bash
+pip install git+https://github.com/rmnjaat/claude_sdk.git
+```
+
+Or install from source:
+
+```bash
 git clone https://github.com/rmnjaat/claude_sdk.git
 cd claude_sdk
+pip install .
+```
+
+For development (editable install):
+
+```bash
+pip install -e .
 ```
 
 **Prerequisite:** The [Claude CLI](https://docs.anthropic.com/en/docs/claude-code) must be installed and authenticated.
@@ -318,12 +331,14 @@ client = Claude(
 
 ```
 claude_sdk/
-├── __init__.py        # Public API exports
-├── client.py          # Core Claude class — builds CLI commands, runs subprocess, parses output
-├── models.py          # ClaudeResponse dataclass
-├── exceptions.py      # Custom exceptions (CLINotFound, CLIError, SafetyError, etc.)
-├── conversation.py    # Multi-turn Conversation helper with session tracking
-└── streaming.py       # Streaming response handler (stream-json parsing + callbacks)
+├── pyproject.toml     # Package configuration (pip installable)
+├── claude_sdk/
+│   ├── __init__.py        # Public API exports
+│   ├── client.py          # Core Claude class — builds CLI commands, runs subprocess, parses output
+│   ├── models.py          # ClaudeResponse dataclass
+│   ├── exceptions.py      # Custom exceptions (CLINotFound, CLIError, SafetyError, etc.)
+│   ├── conversation.py    # Multi-turn Conversation helper with session tracking
+│   └── streaming.py       # Streaming response handler (stream-json parsing + callbacks)
 ```
 
 No external dependencies — pure Python stdlib.
@@ -400,7 +415,7 @@ Every `claude` CLI flag has a corresponding Python parameter:
 | `files` | `--file` | `list[str]` |
 | `worktree` | `--worktree` | `bool` or `str` |
 
-See [PLAN.md](PLAN.md) for the full mapping of all 40+ parameters.
+See the full parameter list in `claude_sdk/client.py`.
 
 ## License
 
